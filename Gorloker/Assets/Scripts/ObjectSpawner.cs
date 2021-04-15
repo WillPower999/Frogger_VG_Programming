@@ -7,6 +7,7 @@ public class ObjectSpawner : MonoBehaviour
     public static ObjectSpawner Instance;
     public MovableObject objectPrefab;
     public int goThisWay;
+    public int randomGeneration;
 
 private void Awake()
 {
@@ -41,7 +42,7 @@ private void Awake()
 
     private IEnumerator DelayServeCo(int newServeXDirection)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(randomGeneration);
         goThisWay = newServeXDirection;
         ServeBall();
         DelayServe(goThisWay);
