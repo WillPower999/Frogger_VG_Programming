@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public static MainMenu Instance;
+    private Button _Start;
+
+    private void Awake()
     {
-        
+        Instance = this;
+    }
+    void OnEnable()
+    {
+        _Start.onClick.AddListener(StartForOnePlayer);
+    }
+    void onDisable()
+    {
+        _Start.onClick.RemoveListener(StartForOnePlayer);
+    }
+    void StartForOnePlayer()
+    {
+        SceneManager.LoadScene(1);
     }
 }
