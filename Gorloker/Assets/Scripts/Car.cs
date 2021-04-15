@@ -11,4 +11,12 @@ public class Car : MonoBehaviour
             GameManager.Instance.ResetLevel();
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            GameManager.Instance.ResetLevel();
+        }
+    }
 }
