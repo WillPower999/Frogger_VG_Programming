@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
 
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     void resetLevel()
     {
         Player.transform.position = playerStartPosition;
-
+        Instance = this;
     }
 
 
