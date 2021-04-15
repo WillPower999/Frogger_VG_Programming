@@ -9,7 +9,7 @@ public class Log : MonoBehaviour
     {
         
     }
-    public float movementSpeed;
+    public float movementSpeed ;
     public Vector3 direction;
 
     public float maxXPosition;
