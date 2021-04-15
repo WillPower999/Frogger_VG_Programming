@@ -6,20 +6,21 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
 
 
-    void resetLevel()
+    public void ResetLevel()
     {
         Player.transform.position = playerStartPosition;
-
     }
 
 
     void Start()
     {
         playerStartPosition = Player.transform.position;
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            resetLevel();
+            ResetLevel();
 
         }
     }
