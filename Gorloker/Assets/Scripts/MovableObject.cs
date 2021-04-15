@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Log : MonoBehaviour
+public class MovableObject : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    public float movementSpeed;
+    public float movementSpeed ;
     public Vector3 direction;
 
     public float maxXPosition;

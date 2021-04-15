@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     private bool isMoving;
     private Vector3 origPos, targetPos;
-    private float timeToMove = 0.2f;
+    private float timeToMove = 0.13f;
 
     void Update()
     {
