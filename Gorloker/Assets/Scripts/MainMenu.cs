@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
 
     public static MainMenu Instance;
-    private Button _Start;
+    public Button _Start;
 
     private void Awake()
     {
@@ -20,7 +22,7 @@ public class MainMenu : MonoBehaviour
     {
         _Start.onClick.RemoveListener(StartForOnePlayer);
     }
-    void StartForOnePlayer()
+    public void StartForOnePlayer()
     {
         SceneManager.LoadScene(1);
     }
