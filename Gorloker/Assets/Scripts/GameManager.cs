@@ -5,22 +5,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
 
 
-    public void ResetLevel()
+    void resetLevel()
     {
         Player.transform.position = playerStartPosition;
+        Instance = this;
     }
 
 
     void Start()
     {
         playerStartPosition = Player.transform.position;
-        Instance = this;
     }
 
     // Update is called once per frame
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            ResetLevel();
+            resetLevel();
 
         }
     }
