@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3676216fc640a1b42b6a5d79a0c7a949
+guid: d8334ffd6679d3c4daa8b26fa14db56f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8972531505753780146
-    second: tileset_road_0
+      213: 2259036522406338065
+    second: tileset_road_top_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,7 +94,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset_road_0
+      name: tileset_road_top_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e409b8f422a2b7380800000000000000
-      internalID: -8972531505753780146
+      spriteID: 11ed9ac8fb5b95f10800000000000000
+      internalID: 2259036522406338065
       vertices: []
       indices: 
       edges: []
