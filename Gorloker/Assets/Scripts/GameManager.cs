@@ -8,11 +8,15 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
-    
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void ResetLevel()
     {
         Player.transform.position = playerStartPosition;
-        Instance = this;
     }
 
 
