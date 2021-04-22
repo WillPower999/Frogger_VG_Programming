@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     {
         Player.transform.position = playerStartPosition;
         Instance = this;
+        
     }
 
 
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             resetLevel();
-
+            LIVES.Instance.LoseLife();
         }
     }
 }
