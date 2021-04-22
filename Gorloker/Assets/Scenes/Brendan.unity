@@ -405,7 +405,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &987782650
 GameObject:
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780b60047d4faf54988810e8f7d7a49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectImage: {fileID: 1429425420644718955, guid: 951a663bceea44042aece2ad6a72a633, type: 3}
+  collectImage: {fileID: 1121991514928857897, guid: 3afa721997436274dafc9fcae40d5cc3, type: 3}
 --- !u!61 &1208575089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -807,7 +807,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2040171889
 GameObject:

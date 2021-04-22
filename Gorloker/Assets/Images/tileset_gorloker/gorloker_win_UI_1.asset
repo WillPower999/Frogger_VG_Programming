@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: tileset_stayoff_0
+  m_Name: gorloker_win_UI_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 6277618565749044404, guid: 0af3615103cd24f4ab234e68a9d1e821, type: 3}
+  m_Sprite: {fileID: 6494890330631194536, guid: c9b753b68368e684692cca6cc1d0f41f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
