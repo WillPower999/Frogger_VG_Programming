@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
-    
+
     public void resetLevel()
     {
         Player.transform.position = playerStartPosition;
