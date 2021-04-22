@@ -12,12 +12,17 @@ public class GameManager : MonoBehaviour
     public void resetLevel()
     {
         Player.transform.position = playerStartPosition;
-        Instance = this;
     }
 
+    public void HandleDeath()
+    {
+        LIVES.Instance.LoseLife();
+        resetLevel();
+    }
 
     void Start()
     {
+        Instance = this;
         playerStartPosition = Player.transform.position;
     }
 
@@ -25,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
-        {
+        { 
             resetLevel();
         }
     }

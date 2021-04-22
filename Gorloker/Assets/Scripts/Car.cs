@@ -8,7 +8,7 @@ public class Car : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GameManager.Instance.resetLevel();
+            GameManager.Instance.HandleDeath();
         }
     }
 
@@ -16,7 +16,7 @@ public class Car : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GameManager.Instance.resetLevel();
+            GameManager.Instance.HandleDeath();
         }
     }
 }

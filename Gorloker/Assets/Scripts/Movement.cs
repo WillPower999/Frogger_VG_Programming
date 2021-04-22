@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private bool isMoving;
+    [HideInInspector] public bool isMoving;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.13f;
+    private float elapsedTime = 0;
 
     void Update()
     {
@@ -26,7 +27,7 @@ public class Movement : MonoBehaviour
     {
         isMoving = true;
 
-        float elapsedTime = 0;
+        elapsedTime = 0;
 
         origPos = transform.position;
         targetPos = origPos + direction;
@@ -39,6 +40,13 @@ public class Movement : MonoBehaviour
         }
         transform.position = targetPos;
 
+        isMoving = false;
+    }
+
+    public void CancelMove()
+    {
+        StopCoroutine(nameof(MovePlayer));
+        elapsedTime = 1;
         isMoving = false;
     }
 }
