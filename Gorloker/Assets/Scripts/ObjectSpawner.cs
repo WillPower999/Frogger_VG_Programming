@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogSpawner : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
-    public static LogSpawner Instance;
-    public Log logPrefab;
+    public static ObjectSpawner Instance;
+    public MovableObject objectPrefab;
     public int goThisWay;
+    public int randomGeneration;
 
 private void Awake()
 {
@@ -27,8 +28,8 @@ private void Awake()
 
     public void ServeBall()
     {
-        Log newLog = Instantiate(logPrefab,transform.position,transform.rotation,null);
-        newLog.direction = new Vector3(goThisWay,  0);
+        MovableObject newObject = Instantiate(objectPrefab, transform.position,transform.rotation,null);
+        newObject.direction = new Vector3(goThisWay,  0);
         
     }
 
@@ -41,7 +42,7 @@ private void Awake()
 
     private IEnumerator DelayServeCo(int newServeXDirection)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(randomGeneration);
         goThisWay = newServeXDirection;
         ServeBall();
         DelayServe(goThisWay);
