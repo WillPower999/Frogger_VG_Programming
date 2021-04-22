@@ -8,9 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
-
-
-    void resetLevel()
+    
+    public void resetLevel()
     {
         Player.transform.position = playerStartPosition;
         Instance = this;
@@ -28,7 +27,6 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             resetLevel();
-
         }
     }
 }
