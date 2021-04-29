@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1101006196652538414}
   - component: {fileID: 7755338620424676318}
-  - component: {fileID: -7292112173510896478}
-  - component: {fileID: 6379616471570932980}
-  - component: {fileID: 5652172148154113335}
-  - component: {fileID: 7210958495584001147}
+  - component: {fileID: 8068573509890748829}
+  - component: {fileID: -8461618808246795377}
+  - component: {fileID: 1094030458789890866}
+  - component: {fileID: 8280374384974266270}
   m_Layer: 0
-  m_Name: car
+  m_Name: board 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3463705051280277355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.300952, y: 0.300952, z: 0.300952}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.381986, y: 0.381986, z: 0.381986}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8633d11d930ce8e49841fcf9c8937b64, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: b45d9ef1e114f8044bdf8806399a67a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,19 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7292112173510896478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3463705051280277355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed378b11f989e1946a17631c6c81aeb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6379616471570932980
+--- !u!114 &8068573509890748829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +103,45 @@ MonoBehaviour:
   maxXPosition: 10
   previousXPosition: 0
   currentXPosition: 0
---- !u!50 &5652172148154113335
+--- !u!114 &-8461618808246795377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463705051280277355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5aaacafe1fbc042bcf6c352e67a0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1094030458789890866
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463705051280277355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.01}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.6, y: 3.2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.27, y: 0.6}
+  m_EdgeRadius: 0
+--- !u!50 &8280374384974266270
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -135,30 +161,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &7210958495584001147
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3463705051280277355}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Constraints: 0

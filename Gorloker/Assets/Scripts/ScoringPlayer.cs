@@ -10,13 +10,11 @@ public class ScoringPlayer : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            //addpoints
-
             Destroy(gameObject);
 
             GameObject newGameObject = Instantiate(collectImage);
             newGameObject.transform.position = transform.position;
-
+            GameManager.Instance.Collect();
         }
     }
 
