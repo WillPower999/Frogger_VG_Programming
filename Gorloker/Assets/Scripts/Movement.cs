@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public static Movement Instance;
+
     [HideInInspector] public bool isMoving;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.13f;
@@ -16,13 +18,17 @@ public class Movement : MonoBehaviour
 
     private bool isWalkLeft = false;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W) && !isMoving)
         {
             playerSprite.transform.eulerAngles = new Vector3(0, 0, 0);
             StartCoroutine(MovePlayer(Vector3.up));
-
         }
 
         if (Input.GetKeyDown(KeyCode.A) && !isMoving)
@@ -43,6 +49,13 @@ public class Movement : MonoBehaviour
             StartCoroutine(MovePlayer(Vector3.right));
         }
     }
+
+    public void ResetMovement()
+    {
+        StopAllCoroutines();
+        isMoving = false;
+    }
+
     private IEnumerator MovePlayer(Vector3 direction)
     {
         isMoving = true;

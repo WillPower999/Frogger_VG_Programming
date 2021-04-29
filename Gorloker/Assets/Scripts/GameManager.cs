@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,9 +10,35 @@ public class GameManager : MonoBehaviour
     private Vector3 playerStartPosition;
     public GameObject Player;
 
+    private int _scoreZonesRemaining;
+
+    private void Awake()
+    {
+        _scoreZonesRemaining = FindObjectsOfType<ScoringPlayer>().Length;
+    }
+
     public void resetLevel()
     {
+        Movement.Instance.ResetMovement();
         Player.transform.position = playerStartPosition;
+    }
+
+    public void Collect()
+    {
+        _scoreZonesRemaining--;
+        if (_scoreZonesRemaining > 0)
+        {
+            resetLevel();
+        }
+        else
+        {
+            CompleteLevel();
+        }
+    }
+
+    public void CompleteLevel()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void HandleDeath()
