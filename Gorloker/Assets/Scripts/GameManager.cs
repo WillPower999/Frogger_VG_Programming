@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{
-    // Start is called before the first frame update
+{   
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
+
+    public int scoreZonesRemaining;
+
+    private void Awake()
+    {
+        scoreZonesRemaining = FindObjectsOfType<ScoringPlayer>().Length;
+    }
 
     public void resetLevel()
     {
@@ -20,6 +27,25 @@ public class GameManager : MonoBehaviour
         resetLevel();
     }
 
+    public void Collect()
+    {
+        scoreZonesRemaining--;
+        Movement.Instance.StopMovement();
+        if (scoreZonesRemaining <= 0)
+        {
+            CompleteLevel();
+        }
+        else
+        {
+            resetLevel();
+        }
+    }
+
+    public void CompleteLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     void Start()
     {
         Instance = this;
@@ -29,9 +55,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
-        { 
-            resetLevel();
-        }
+        
     }
 }

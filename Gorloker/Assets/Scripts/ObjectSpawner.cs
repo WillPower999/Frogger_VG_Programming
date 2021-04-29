@@ -35,9 +35,7 @@ private void Awake()
 
     public void DelayServe(int newServeXDirection)
     {
-        print("test");
         StartCoroutine(DelayServeCo(newServeXDirection));
-
     }
 
     private IEnumerator DelayServeCo(int newServeXDirection)

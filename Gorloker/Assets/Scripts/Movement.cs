@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public static Movement Instance;
+
     [HideInInspector] public bool isMoving;
     private Vector3 origPos, targetPos;
     private float timeToMove = 0.13f;
     private float elapsedTime = 0;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void StopMovement()
+    {
+        StopAllCoroutines();
+        isMoving = false;
+    }
 
     void Update()
     {
