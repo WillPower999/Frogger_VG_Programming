@@ -5,31 +5,33 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
 
-
-    public void ResetLevel()
+    public void resetLevel()
     {
         Player.transform.position = playerStartPosition;
     }
 
+    public void HandleDeath()
+    {
+        LIVES.Instance.LoseLife();
+        resetLevel();
+    }
 
     void Start()
     {
-        playerStartPosition = Player.transform.position;
         Instance = this;
+        playerStartPosition = Player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
-        {
-            ResetLevel();
-
+        { 
+            resetLevel();
         }
     }
 }
