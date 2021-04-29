@@ -8,6 +8,7 @@ public class ObjectSpawner : MonoBehaviour
     public MovableObject objectPrefab;
     public int goThisWay;
     public int randomGeneration;
+    public float speedspeed;
 
 private void Awake()
 {
@@ -25,6 +26,13 @@ private void Awake()
         //    ServeBall();
         //}
     }
+    public void moveingeneral()
+    {
+        transform.position += Vector3.left * speedspeed * Time.deltaTime;
+
+
+    }
+    
 
     public void ServeBall()
     {
