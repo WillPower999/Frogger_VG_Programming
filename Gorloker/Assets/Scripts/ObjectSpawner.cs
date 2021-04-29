@@ -8,7 +8,7 @@ public class ObjectSpawner : MonoBehaviour
     public MovableObject objectPrefab;
     public int goThisWay;
     public int randomGeneration;
-    public float speedspeed;
+    public float spawnerMovementSpeed;
 
 private void Awake()
 {
@@ -26,19 +26,19 @@ private void Awake()
         //    ServeBall();
         //}
     }
-    public void moveingeneral()
-    {
-        transform.position += Vector3.left * speedspeed * Time.deltaTime;
+    //public void moveingeneral()
+    //{
+    //    transform.position += Vector3.left * speedspeed * Time.deltaTime;
 
 
-    }
+    //}
     
 
     public void ServeBall()
     {
         MovableObject newObject = Instantiate(objectPrefab, transform.position,transform.rotation,null);
         newObject.direction = new Vector3(goThisWay,  0);
-        
+        newObject.movementSpeed = spawnerMovementSpeed;
     }
 
     public void DelayServe(int newServeXDirection)
