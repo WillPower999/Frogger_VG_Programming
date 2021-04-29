@@ -364,7 +364,7 @@ MonoBehaviour:
   objectPrefab: {fileID: 8068573509890748829, guid: b83093e19be15f748985be6f4bee3a1c, type: 3}
   goThisWay: -1
   randomGeneration: 5
-  spawnerMovementSpeed: 0
+  spawnerMovementSpeed: 2
 --- !u!4 &362019085
 Transform:
   m_ObjectHideFlags: 0
@@ -2663,8 +2663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 6379616471570932980, guid: 88ca9fa2006021046aea73d43801378d, type: 3}
   goThisWay: -1
-  randomGeneration: 8
-  spawnerMovementSpeed: 1
+  randomGeneration: 1
+  spawnerMovementSpeed: 6
 --- !u!4 &527412465
 Transform:
   m_ObjectHideFlags: 0
@@ -3065,8 +3065,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 6379616471570932980, guid: 866ea00f02f1b0d4584a76bd5886a829, type: 3}
   goThisWay: 1
-  randomGeneration: 6
-  spawnerMovementSpeed: 1
+  randomGeneration: 4
+  spawnerMovementSpeed: 3
 --- !u!4 &685955188
 Transform:
   m_ObjectHideFlags: 0
@@ -3262,8 +3262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 6379616471570932980, guid: a9a1dbf59284ce74ca581a496109d0d8, type: 3}
   goThisWay: -1
-  randomGeneration: 5
-  spawnerMovementSpeed: 1
+  randomGeneration: 4
+  spawnerMovementSpeed: 11
 --- !u!4 &720451739
 Transform:
   m_ObjectHideFlags: 0
@@ -3858,8 +3858,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 6379616471570932980, guid: 0f1ab46aeed1d9840a4f0d7ba6cef1e7, type: 3}
   goThisWay: 1
-  randomGeneration: 5
-  spawnerMovementSpeed: 1
+  randomGeneration: 2
+  spawnerMovementSpeed: 6
 --- !u!4 &795077713
 Transform:
   m_ObjectHideFlags: 0
@@ -4057,7 +4057,7 @@ MonoBehaviour:
   objectPrefab: {fileID: 8068573509890748829, guid: e8e5743f6b60cc44dbe164e90331bde5, type: 3}
   goThisWay: 1
   randomGeneration: 6
-  spawnerMovementSpeed: 1
+  spawnerMovementSpeed: 3
 --- !u!4 &984895290
 Transform:
   m_ObjectHideFlags: 0
@@ -4275,8 +4275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 8068573509890748829, guid: b83093e19be15f748985be6f4bee3a1c, type: 3}
   goThisWay: 1
-  randomGeneration: 7
-  spawnerMovementSpeed: 1
+  randomGeneration: 4
+  spawnerMovementSpeed: 3
 --- !u!4 &1126452834
 Transform:
   m_ObjectHideFlags: 0
