@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private Vector3 playerStartPosition;
     public GameObject Player;
+    public GameObject win;
 
-    private int _scoreZonesRemaining;
+    public int _scoreZonesRemaining;
 
     private void Awake()
     {
@@ -38,7 +39,9 @@ public class GameManager : MonoBehaviour
 
     public void CompleteLevel()
     {
-        SceneManager.LoadScene(0);
+        win.SetActive(true);
+        Destroy(Movement.Instance);
+        StartCoroutine(Win());
     }
 
     public void HandleDeath()
@@ -47,10 +50,22 @@ public class GameManager : MonoBehaviour
         resetLevel();
     }
 
+    public void GameOver()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     void Start()
     {
         Instance = this;
         playerStartPosition = Player.transform.position;
+        win.SetActive(false);
+    }
+
+    private IEnumerator Win()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(0);
     }
 
     // Update is called once per frame
