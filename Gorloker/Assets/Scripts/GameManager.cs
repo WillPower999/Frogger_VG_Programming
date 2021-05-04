@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _scoreZonesRemaining = FindObjectsOfType<ScoringPlayer>().Length;
+
     }
 
     public void resetLevel()
