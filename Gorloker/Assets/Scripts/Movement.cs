@@ -18,9 +18,14 @@ public class Movement : MonoBehaviour
 
     private bool isWalkLeft = false;
 
+    [HideInInspector] public bool isOnGrass;
+    [HideInInspector] public bool isOnBoard;
+
     private void Awake()
     {
         Instance = this;
+        isOnGrass = false;
+        isOnBoard = false;
     }
 
     void Update()
@@ -86,6 +91,8 @@ public class Movement : MonoBehaviour
 
         isMoving = false;
 
+        CheckForGrass();
+
         yield return new WaitForSeconds(.1f);
 
         if (!isMoving)
@@ -99,5 +106,13 @@ public class Movement : MonoBehaviour
         StopCoroutine(nameof(MovePlayer));
         elapsedTime = 1;
         isMoving = false;
+    }
+
+    void CheckForGrass()
+    {
+        if (isOnGrass && !isOnBoard)
+        {
+            GameManager.Instance.HandleDeath();
+        }
     }
 }

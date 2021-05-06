@@ -65,7 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3463705051280277355, guid: b83093e19be15f748985be6f4bee3a1c, type: 3}
       propertyPath: m_Name
-      value: car
+      value: car Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068573509890748829, guid: b83093e19be15f748985be6f4bee3a1c, type: 3}
+      propertyPath: maxXPosition
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8461618808246795377, guid: b83093e19be15f748985be6f4bee3a1c, type: 3}
