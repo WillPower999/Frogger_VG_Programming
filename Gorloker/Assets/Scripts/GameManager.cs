@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public void CompleteLevel()
     {
         win.SetActive(true);
+        Destroy(Player);
         Destroy(Movement.Instance);
         StartCoroutine(Win());
     }
