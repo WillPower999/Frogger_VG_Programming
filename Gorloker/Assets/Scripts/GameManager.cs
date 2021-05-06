@@ -20,8 +20,30 @@ public class GameManager : MonoBehaviour
 
     public void resetLevel()
     {
-        Movement.Instance.ResetMovement();
+        if (LIVES.Instance.died)
+        {
+            Movement.Instance.ResetMovement();
+            DeathAnim();
+        }
+        else
+        {
+            Movement.Instance.ResetMovement();
+            Player.transform.position = playerStartPosition;
+        }
+    }
+
+    public void DeathAnim()
+    {
+
+        StartCoroutine(DeathBuffer());
+    }
+
+    private IEnumerator DeathBuffer()
+    {
+
+        yield return new WaitForSeconds(3);
         Player.transform.position = playerStartPosition;
+
     }
 
     public void Collect()

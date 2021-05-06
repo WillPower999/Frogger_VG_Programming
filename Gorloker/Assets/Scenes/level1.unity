@@ -3407,7 +3407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10a583a68094b7418f852336357c69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 45
+  maxTime: 60
   timeLeft: 0
   timeOut: {fileID: 1358570592}
   timeAddUI: {fileID: 1226435690}
@@ -4593,7 +4593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 8068573509890748829, guid: b29f67665cbdf78459063a4bf153aaff, type: 3}
   goThisWay: -1
-  randomGeneration: 3
+  randomGeneration: 1
   spawnerMovementSpeed: 6
 --- !u!4 &949799571
 Transform:

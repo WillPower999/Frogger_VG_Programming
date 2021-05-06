@@ -30,25 +30,25 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && !isMoving)
         {
             playerSprite.transform.eulerAngles = new Vector3(0, 0, 0);
             StartCoroutine(MovePlayer(Vector3.up));
         }
 
-        if (Input.GetKeyDown(KeyCode.A) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) && !isMoving)
         {
             playerSprite.transform.eulerAngles = new Vector3(0, 0, 90);
             StartCoroutine(MovePlayer(Vector3.left));
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && !isMoving)
         {
             playerSprite.transform.eulerAngles = new Vector3(0, 0, 180);
             StartCoroutine(MovePlayer(Vector3.down));
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) && !isMoving)
         {
             playerSprite.transform.eulerAngles = new Vector3(0, 0, -90);
             StartCoroutine(MovePlayer(Vector3.right));

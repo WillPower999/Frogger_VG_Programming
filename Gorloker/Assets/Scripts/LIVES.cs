@@ -11,7 +11,7 @@ public class LIVES : MonoBehaviour
     public int _amountOfLives;
     //public Image healthBar;
     public List<Image> images;
-    //private bool canDie;
+    public bool died;
     public GameObject lost;
 
     private void Start()
@@ -24,7 +24,7 @@ public class LIVES : MonoBehaviour
         Instance = this;
         print(images.Count);
         _amountOfLives = images.Count;
-        //canDie = true;
+        died = false;
     }
 
     public void UpdateHealthBar(int currentLives, int maxLives)
@@ -36,6 +36,7 @@ public class LIVES : MonoBehaviour
     {
         //StartCoroutine(DeathBuffer());
         _amountOfLives--;
+        died = true;
         print(_amountOfLives);
         UpdateHealthUI();
     }
