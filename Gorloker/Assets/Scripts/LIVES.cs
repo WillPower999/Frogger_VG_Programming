@@ -13,9 +13,11 @@ public class LIVES : MonoBehaviour
     public List<Image> images;
     public bool died;
     public GameObject lost;
+    private bool _canLose;
 
     private void Start()
     {
+        _canLose = true;
         lost.SetActive(false);
     }
 
@@ -75,14 +77,16 @@ public class LIVES : MonoBehaviour
 
     private IEnumerator Lose()
     {
+        SoundManager.Instance.death.Play();
         yield return new WaitForSeconds(3);
         GameManager.Instance.GameOver();
     }
 
     private void Update()
     {
-        if(_amountOfLives <= 0)
+        if(_amountOfLives <= 0 && _canLose)
         {
+            _canLose = false;
             lost.SetActive(true);
             Destroy(Movement.Instance);
             StartCoroutine(Lose());

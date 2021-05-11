@@ -17,6 +17,7 @@ public class ScoringPlayer : MonoBehaviour
             newGameObject.transform.position = newSpawn.transform.position;
             GameManager.Instance.Collect();
             Timer.Instance.AddTime();
+            SoundManager.Instance.win.Play();
         }
     }
 

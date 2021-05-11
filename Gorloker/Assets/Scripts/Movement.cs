@@ -63,6 +63,8 @@ public class Movement : MonoBehaviour
 
     private IEnumerator MovePlayer(Vector3 direction)
     {
+        SoundManager.Instance.move.Play();
+
         isMoving = true;
 
         if (isWalkLeft)

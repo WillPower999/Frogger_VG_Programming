@@ -20,16 +20,16 @@ public class GameManager : MonoBehaviour
 
     public void resetLevel()
     {
-        if (LIVES.Instance.died)
-        {
-            Movement.Instance.ResetMovement();
-            DeathAnim();
-        }
-        else
-        {
+        //if (LIVES.Instance.died)
+        //{
+        //    Movement.Instance.ResetMovement();
+        //    DeathAnim();
+        //}
+        //else
+        //{
             Movement.Instance.ResetMovement();
             Player.transform.position = playerStartPosition;
-        }
+        //}
     }
 
     public void DeathAnim()
@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteLevel()
     {
+        SoundManager.Instance.gameWin.Play();
         win.SetActive(true);
         Destroy(Player);
         Destroy(Movement.Instance);
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void HandleDeath()
     {
+        SoundManager.Instance.hurt.Play();
         LIVES.Instance.LoseLife();
         resetLevel();
     }
